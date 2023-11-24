@@ -1,0 +1,119 @@
+.calc {
+  margin: 50px auto;
+  width: 275px;
+  height: 475px;
+  border-radius: 20px;
+  background: #e0e8f0;
+  color: #333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 18px;
+  box-shadow: 4px 4px 4px #4f4f4f;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.calc-screen {
+  grid-column: span 4;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.calc-screen p {
+  text-align: right;
+  font-size: 3.5rem;
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+.button {
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 7px;
+  justify-items: center;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  background: #c2d4e8;
+  border-radius: 80%;
+  text-align: center;
+  line-height: 57px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn.zero {
+  grid-column: span 2;
+  width: 100%;
+  border-radius: 34px;
+}
+
+.btn:hover {
+  filter: brightness(120%);
+}
+
+.btn:active {
+  filter: brightness(90%);
+}
+
+.btn.ac,
+.btn.plus-minus,
+.btn.percent,
+.btn.division,
+.btn.myltiply,
+.btn.minus,
+.btn.plus,
+.btn.equal {
+  background: #9caebd;
+}
+
+.btn.ac,
+.btn.plus-minus,
+.btn.percent,
+.btn.division {
+  background: #7b8f9a;
+}
+.box {
+  position: relative;
+}
+
+.box button {
+  position: absolute;
+  left: -12222334px;
+}
+.box label {
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  height: 20px;
+  background: rgb(101, 159, 172);
+  border-radius: 40px;
+  transition: all ease 0.2s;
+}
+.box label:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background: rgb(216, 216, 216);
+  top: 2px;
+  right: 2px;
+  transition: all ease 0.2s;
+}
+.box button:checked + label {
+  background: rgb(144, 144, 204);
+}
